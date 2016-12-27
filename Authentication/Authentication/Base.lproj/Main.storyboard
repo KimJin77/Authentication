@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2553a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="97M-FH-3gE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Authentication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--TouchID View Controller-->
+        <scene sceneID="I5K-Kw-ejA">
+            <objects>
+                <viewController id="QqC-Ua-jxk" customClass="TouchIDViewController" customModule="Authentication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jkQ-7X-GcH"/>
+                        <viewControllerLayoutGuide type="bottom" id="8q0-x7-zYn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2hx-Am-bYn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="L1b-2q-0Oe">
+                                <rect key="frame" x="154" y="80" width="67.5" height="67.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67.5" id="A9u-xF-JXH"/>
+                                    <constraint firstAttribute="height" constant="67.5" id="OYf-E9-McZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXM-93-cX5">
+                                <rect key="frame" x="130" y="283" width="115" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EqJ-NB-stS"/>
+                                    <constraint firstAttribute="width" constant="115" id="R1c-2u-qpl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="-64" minY="0.0" maxX="0.0" maxY="-79"/>
+                                <inset key="imageEdgeInsets" minX="17" minY="-30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="点击进行指纹解锁" image="fingerprint">
+                                    <color key="titleColor" red="0.10588235294117647" green="0.57647058823529407" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTappedUnlockButton:" destination="QqC-Ua-jxk" eventType="touchUpInside" id="DZ3-MC-E9a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxD-CR-5ei">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <state key="normal" title="登录其他账户">
+                                    <color key="titleColor" red="0.1058823529" green="0.57647058819999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BXM-93-cX5" firstAttribute="centerX" secondItem="2hx-Am-bYn" secondAttribute="centerX" id="C9c-Rr-BIM"/>
+                            <constraint firstItem="WxD-CR-5ei" firstAttribute="centerX" secondItem="2hx-Am-bYn" secondAttribute="centerX" id="FkK-x1-h5M"/>
+                            <constraint firstItem="L1b-2q-0Oe" firstAttribute="centerX" secondItem="2hx-Am-bYn" secondAttribute="centerX" id="H2C-Dd-ime"/>
+                            <constraint firstItem="BXM-93-cX5" firstAttribute="centerY" secondItem="2hx-Am-bYn" secondAttribute="centerY" id="MGJ-R2-nrp"/>
+                            <constraint firstItem="8q0-x7-zYn" firstAttribute="top" secondItem="WxD-CR-5ei" secondAttribute="bottom" constant="20" id="Nod-tJ-E1F"/>
+                            <constraint firstItem="L1b-2q-0Oe" firstAttribute="top" secondItem="jkQ-7X-GcH" secondAttribute="bottom" constant="60" id="aBO-sU-JMQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="WxD-CR-5ei" secondAttribute="leading" id="e2Q-3F-tSt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WxD-CR-5ei" secondAttribute="trailing" id="jYj-sd-XJD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="da1-Jr-16u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="122.78860569715144"/>
+        </scene>
+        <!--Pattern Lock View Controller-->
+        <scene sceneID="U54-5h-4bz">
+            <objects>
+                <viewController id="VtL-vq-c9V" customClass="PatternLockViewController" customModule="Authentication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5sk-g9-Wcj"/>
+                        <viewControllerLayoutGuide type="bottom" id="44x-eX-lfc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c1A-xY-RUF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DI9-yW-nie"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEM-5u-yI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2420" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lSe-Vn-bn5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="97M-FH-3gE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="awQ-P8-Nwu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VtL-vq-c9V" kind="relationship" relationship="rootViewController" id="tFu-LE-wF6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlI-tB-5JC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480.8" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar" width="990" height="992"/>
+        <image name="fingerprint" width="62" height="62"/>
+    </resources>
+</document>
